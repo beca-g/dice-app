@@ -6,7 +6,7 @@ describe "user stories" do
 
   it "a user can roll a dice" do
     dice = Dice.new
-    expect(dice).to respond_to(:roll)
+    expect(dice).to respond_to(:roll).with(1).argument
   end
 
   # As a board game player,
@@ -19,8 +19,22 @@ describe "user stories" do
 
   it "a dice roll generates a random number between 1-6" do
     dice = Dice.new
-    dice_roll = dice.roll
+    dice_roll = dice.roll(1)
     expect(dice_roll).to be_between 1, 6
+  end
+
+  # As a board game player, 
+  # So that I can play many types of games
+  # I want to be able to roll any number of dice at the same time
+
+  # As a board game player,
+  # So that I can keep track of past and previous rolls
+  # I want to record each dice roll
+
+  it "a user can throw more than one dice" do
+    dice = Dice.new
+    dice.roll(2)
+    expect(dice.rolls.length).to eq 2
   end
 
 end
