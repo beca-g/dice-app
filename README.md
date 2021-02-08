@@ -1,10 +1,11 @@
 Dice app
 =========
 
+A simple dice app to replicate dice being thrown.
+
 | Class | Atributes | Methods          |
 |-------|-----------|------------------|
 | Dice  | @rolls    | roll<br>roll_sum |
-|       |           |                  |
 
 
 ## User stories
@@ -43,4 +44,18 @@ I want to record each dice roll
 As a board game player,
 So that I know what my score is after I have rolled several dice
 I want to be able to get my current score
+```
+
+## To use the app
+
+### Setup 
+From the command line run the following:
+```
+git clone git@github.com:beca-g/dice-app.git
+cd dice-app
+```
+
+### To run tests
+```
+rspec
 ```
