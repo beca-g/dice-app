@@ -10,4 +10,8 @@ class Dice
       rolls << rand(1..6)
     end
   end
+
+  def roll_sum
+    rolls.sum
+  end
 end

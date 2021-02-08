@@ -37,4 +37,15 @@ describe "user stories" do
     expect(dice.rolls.length).to eq 2
   end
 
+    # As a board game player,
+  # So that I know what my score is after I have rolled several dice
+  # I want to be able to get my current score
+
+  it "a user is able to see their current score" do
+    dice = Dice.new
+    srand(4)
+    dice.roll(2)
+    dice.roll(2)
+    expect(dice.roll_sum).to eq 12
+  end
 end

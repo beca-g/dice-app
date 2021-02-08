@@ -18,4 +18,13 @@ describe Dice do
       expect(dice.rolls.length).to eq 2
     end
   end
+
+  describe "#roll_sum" do
+    it "generates the current score" do
+      srand(4)
+      dice.roll(2)
+      dice.roll(2)
+      expect(dice.roll_sum).to eq 12
+    end
+  end
 end
